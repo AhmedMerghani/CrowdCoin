@@ -1,37 +1,71 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 import factory from "../ethereum/factory";
-import { Button, Card } from "semantic-ui-react";
+import {
+  Card,
+  CardContent,
+  CardActions,
+  Typography,
+  Grid2,
+  Button,
+  Box,
+} from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
+import Layout from "../components/layout";
 
 class CampaignIndex extends Component {
+  inputRef = createRef(null);
+
   static async getInitialProps() {
     const campaigns = await factory.methods.getDeployedCampaigns().call();
     return { campaigns };
   }
 
   renderCampaigns() {
-    const items = this.props.campaigns.map((address) => {
-      return {
-        header: address,
-        description: <a>View Campaign</a>,
-        fluid: true,
-      };
-    });
-
-    return <Card.Group items={items} />;
+    return (
+      <Grid2 container>
+        {this.props.campaigns.map((address) => (
+          <Grid2 key={address}>
+            <Card variant="outlined">
+              <CardContent>
+                <Typography variant="h6" component="div">
+                  {address}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small" href="#">
+                  View Campaign
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid2>
+        ))}
+      </Grid2>
+    );
   }
 
   render() {
     return (
-      <div>
-        <link
-          async
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/semantic-ui@latest/dist/semantic.min.css"
-        />
-        <h3>Open Campaigns</h3>
+      <Layout>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginBottom: 3,
+          }}
+        >
+          <h3>Open Campaigns</h3>
+          <Button
+            variant="contained"
+            startIcon={<AddIcon />}
+            sx={{ alignSelf: "flex-end" }}
+          >
+            Create Campaign
+          </Button>
+        </Box>
+
         {this.renderCampaigns()}
-        <Button content="Create Campaign" icon="add circle" primary />
-      </div>
+      </Layout>
     );
   }
 }

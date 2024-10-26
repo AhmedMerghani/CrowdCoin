@@ -4,7 +4,7 @@ const compiledFactory = require("./build/CampaignFactory.json");
 
 const provider = new HDWalletProvider(
   "canoe guard ensure sentence duck more dose west pair anger cause pet",
-  "https://eth-sepolia.g.alchemy.com/v2/tUCUOirXmytmdp664FyHOcCS_ZSQekYB"
+  "https://eth-sepolia.g.alchemy.com/v2/tUCUOirXmytmdp664FyHOcCS_ZSQekYB",
 );
 const web3 = new Web3(provider);
 
