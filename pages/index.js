@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import Layout from "../components/layout";
+import Router from "next/router";
 
 class CampaignIndex extends Component {
   inputRef = createRef(null);
@@ -19,6 +20,15 @@ class CampaignIndex extends Component {
     const campaigns = await factory.methods.getDeployedCampaigns().call();
     return { campaigns };
   }
+
+  openAddCampaign = () => {
+    Router.push("/campaigns/new");
+  };
+
+  goToCampaign = (address) => {
+    const url = "/campaigns/" + address;
+    Router.push(url);
+  };
 
   renderCampaigns() {
     return (
@@ -49,7 +59,7 @@ class CampaignIndex extends Component {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small" href="#">
+                <Button size="small" onClick={() => this.goToCampaign(address)}>
                   View Campaign
                 </Button>
               </CardActions>
@@ -73,6 +83,7 @@ class CampaignIndex extends Component {
         >
           <h3>Open Campaigns</h3>
           <Button
+            onClick={this.openAddCampaign}
             variant="contained"
             startIcon={<AddIcon />}
             sx={{ alignSelf: "flex-end" }}
