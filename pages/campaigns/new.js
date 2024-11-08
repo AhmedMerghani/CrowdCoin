@@ -12,6 +12,7 @@ import {
 import AddIcon from "@mui/icons-material/Add";
 import factory from "../../ethereum/factory";
 import LoadingButton from "@mui/lab/LoadingButton";
+import Router from "next/router";
 
 class CampaignNew extends Component {
   state = {
@@ -38,6 +39,8 @@ class CampaignNew extends Component {
         .send({
           from: accounts[0],
         });
+
+      Router.push("/");
     } catch (err) {
       this.setState({ errorMessage: err.message });
     }
