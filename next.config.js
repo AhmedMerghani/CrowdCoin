@@ -11,7 +11,7 @@ module.exports = {
       },
       {
         source: "/campaigns/:address/requests/new",
-        destination: "/campaigns/requests/new",
+        destination: "/campaigns/requests/new?address=:address",
       },
     ];
   },
