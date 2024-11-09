@@ -7,7 +7,11 @@ module.exports = {
       },
       {
         source: "/campaigns/:address/requests",
-        destination: "/campaigns/requests/index",
+        destination: "/campaigns/requests/",
+      },
+      {
+        source: "/campaigns/:address/requests/new",
+        destination: "/campaigns/requests/new",
       },
     ];
   },

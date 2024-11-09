@@ -4,6 +4,7 @@ import Campaign from "../../ethereum/campaign";
 import { Card, CardContent, Grid2, Button, Typography } from "@mui/material";
 import web3 from "../../ethereum/web3";
 import ContributeForm from "../../components/ContributeForm";
+import Router from "next/router";
 
 class CampaignShow extends Component {
   static async getInitialProps(props) {
