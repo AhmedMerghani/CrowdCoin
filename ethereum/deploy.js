@@ -3,9 +3,10 @@ const Web3 = require("web3");
 const compiledFactory = require("./build/CampaignFactory.json");
 
 const provider = new HDWalletProvider(
-  "canoe guard ensure sentence duck more dose west pair anger cause pet",
-  "https://eth-sepolia.g.alchemy.com/v2/tUCUOirXmytmdp664FyHOcCS_ZSQekYB"
+  process.env.MNEMONIC,
+  process.env.ALCHEMY_API_URL
 );
+
 const web3 = new Web3(provider);
 
 const deploy = async () => {
