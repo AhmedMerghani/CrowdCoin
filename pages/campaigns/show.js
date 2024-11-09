@@ -102,7 +102,9 @@ class CampaignShow extends Component {
                 <Typography sx={{ color: "text.secondary", mb: 1.5 }}>
                   {item.meta}
                 </Typography>
-                <Typography variant="body2">{item.description}</Typography>
+                <Typography color="primary" variant="body2">
+                  {item.description}
+                </Typography>
               </CardContent>
             </Card>
           </Grid2>
