@@ -34,7 +34,7 @@ Welcome to **CrowdCoin**, a decentralized crowdfunding platform built on the Eth
 
 ### Finalizing a Request using MetaMask
 
-[Finalizing a Request using MetaMask](./screenshots/finalizeRequest.png)
+![Finalizing a Request using MetaMask](./screenshots/finalizeRequest.png)
 
 ## 🛠️ Tech Stack
 
