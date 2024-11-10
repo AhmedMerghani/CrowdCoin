@@ -69,7 +69,8 @@ npm install
    Add the following environment variables to a `.env.local` file in the root directory to securely store your sensitive data.
 
 ```bash
-MNEMONIC="your mnemonic phrase here" ALCHEMY_API_URL="https://eth-sepolia.g.alchemy.com/v2/your-alchemy-api-key"
+MNEMONIC="your mnemonic phrase here"
+ALCHEMY_API_URL="https://eth-sepolia.g.alchemy.com/v2/your-alchemy-api-key"
 ```
 
 4. **Compile and Deploy Smart Contracts**:
@@ -94,7 +95,8 @@ Visit `http://localhost:3000` to see the app in action.
 Create a `.env.local` file in the project root and add these values:
 
 ```bash
-MNEMONIC="your mnemonic phrase here" ALCHEMY_API_URL="https://eth-sepolia.g.alchemy.com/v2/your-alchemy-api-key"
+MNEMONIC="your mnemonic phrase here"
+ALCHEMY_API_URL="https://eth-sepolia.g.alchemy.com/v2/your-alchemy-api-key"
 ```
 
 The `.env.local` file should be added to `.gitignore` to keep sensitive information private.
@@ -110,10 +112,6 @@ npx hardhat test
 ## 🤝 Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request.
-
-## 📜 License
-
-This project is licensed under the `MIT License`.
 
 ## 🙏 Acknowledgments
 
