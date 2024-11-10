@@ -4,10 +4,6 @@ Welcome to **CrowdCoin**, a decentralized crowdfunding platform built on the Eth
 
 ---
 
-## 🌐 Live Demo
-
-[Insert link to live demo if available]
-
 ## 🚀 Key Features
 
 - **Campaign Creation**: Start campaigns with a funding goal and manage requests for funds.
@@ -16,7 +12,29 @@ Welcome to **CrowdCoin**, a decentralized crowdfunding platform built on the Eth
 
 ## 📸 Screenshots
 
-Include screenshots or GIFs of the main screens like campaign creation, request approval, and contribution process to give users a visual overview.
+### List of Campaigns
+
+![List of Campaigns](./screenshots/campaigns.png)
+
+### Campaign Creation
+
+![Campaign Creation](./screenshots/campaignCreation.png)
+
+### Campaign Details and Contribution Form
+
+![Campaign Details and Contribution Form](./screenshots/campaign.png)
+
+### Add a Spending Request
+
+![Add a Spending Request](./screenshots/newRequest.png)
+
+### List of Spending Requests
+
+![List of Spending Requests](./screenshots/requests.png)
+
+### Finalizing a Request using MetaMask
+
+[Finalizing a Request using MetaMask](./screenshots/finalizeRequest.png)
 
 ## 🛠️ Tech Stack
 
@@ -99,6 +117,6 @@ This project is licensed under the `MIT License`.
 
 ## 🙏 Acknowledgments
 
-Ethereum for decentralized infrastructure
-`Material-UI` for UI components
-`Web3.js` for blockchain interaction
+- `Ethereum` for decentralized infrastructure.
+- `Material-UI` for UI components.
+- `Web3.js` for blockchain interaction.
